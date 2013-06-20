@@ -1,0 +1,139 @@
+﻿
+
+
+
+<!--Request.IsAuthenticated-->
+@if (ViewBag.Validar !=null && ViewBag.Validar)
+{
+    
+    <text>
+        <div class="ContainerEstudiante">
+                <div class="container">
+                    <div class="four columns">
+                        <nav class="block_Es">
+                            <ul>
+                                <li>
+                                    <div class="Label">
+                                        Nick
+                                         @*Html.DisplayNameFor(model =>model.Nick)*@
+                                    </div>
+                                </li>
+                                <li class="nick">
+                                    <div class="">
+                                        @*Html.DisplayFor(model => model.Nick)*@
+                                        @ViewBag.dato1
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="eight columns">
+                        <p>Hola</p>
+                    </div>
+                    <div class="ten columns">
+                        <nav class="block_Es">
+                            <ul>
+                                <li>
+                                    <div class="Label">
+                                        Nombre
+                                         @*Html.DisplayNameFor(model => model.Nombre)*@
+                                    </div>
+                                </li>
+                                <li class="Nombre">
+                                    <div class="">
+                                        @*Html.DisplayFor(model => model.Nombre)*@
+                                        @ViewBag.dato2
+                                    </div>
+                                </li> 
+                                <li> 
+                                    <div class="">
+                                        @*Html.DisplayFor(model => model.Apellidos)*@
+                                        @ViewBag.dato3
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        
+    </text>
+    
+} else {
+        <div class="container">
+            <div class="content">
+                <div class="eight columns">
+                   logo
+                    <img src=""/>
+                </div>
+                <div class="thirteen columns">
+                    <nav class="main1">
+                        <ul>
+                            <li>
+                                <p class="text1"> Redes Sociales</p>
+                            </li>
+                        </ul>
+                        <ul class="Red_social">
+                            <li>
+                                <a href="www.facebook.com"><img src="~/Imagenes/facebook3.png" /></a>
+                            </li>
+                            <li>
+                                <a href="www.linked.com"><img src="~/Imagenes/linkedIn3 (1).png" /></a>
+                            </li>
+                            <li>
+                                <img src="/Imagenes/picasa3.png" />
+                            </li> 
+                            <li>
+                                <img src="/Imagenes/rss.png" />
+                            </li>
+                            <li>
+                                <a href="www.twitter.com"><img src="/Imagenes/twitter3.png" /></a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p class="text2">Aula Virtual,Comunicaion online</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>Proyecto de seminario de sistemas </p>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="two columns">
+                    <img src="~/Imagenes/bienvenidos.png" />
+                </div>
+            </div>
+            <div class="content_mainmenu">
+                <div class="sixteen columns">
+                    <nav class="mainmenu">
+                        <ul>
+                            <li>
+                                <a href="/Inicio/Index">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="">Cursos</a>
+                            </li>
+                            <li>
+                                <a href="/Inicio/Compania">Compania</a>
+                            </li>
+                            <li>
+                                <a href="">Muestro Trabajo</a>
+                            </li>
+                            <li>
+                                <a href="">Noticias</a>
+                            </li>
+                            <li>
+                                <a href="/Usuario/Index">Registrar</a>
+                            </li>
+                            <li>
+                                <a href="/Login/Login">login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+}

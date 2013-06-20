@@ -1,0 +1,203 @@
+﻿@model PLATAFORMA_VIRTUAL.Models.USUARIO
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2></h2>
+<div class="text8">
+    <p>Registro de Usuario</p>
+</div>
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <div class="contenedorUser">
+        <div class="fromUser">
+            <fieldset>
+                    
+                <nav class="block_user">
+                       <ul>
+                           <li>
+                                <div class="four columns">
+                                    @Html.LabelFor(model => model.Nick)
+                                </div>
+                           </li>
+                           <li>
+                                <div class="four columns">
+                                     @Html.EditorFor(model => model.Nick)
+                                    @Html.ValidationMessageFor(model => model.Nick)
+                                    
+                                </div>
+                           </li>
+                      </ul>
+                      <ul>
+                          <li>
+                                <div class="four columns">
+                                    @Html.LabelFor(model => model.Pass)
+                                </div>
+                          </li>
+                          <li>
+                                <div class="four columns">
+                                    @Html.PasswordFor(model => model.Pass)
+                                    @Html.ValidationMessageFor(model => model.Pass)
+                                </div>
+                          </li>
+                      </ul>
+                      <ul>
+                          <li>
+                            <div class="four columns">
+                                @Html.LabelFor(model => model.Nombre)
+                            </div>
+                          <li>
+                          <li>
+                            <div class="four columns">
+                                @Html.EditorFor(model => model.Nombre)
+                                @Html.ValidationMessageFor(model => model.Nombre)
+                            </div>
+                          </li>
+                      </ul>
+                      <ul>
+                          <li>
+                            <div class="four columns">
+                                @Html.LabelFor(model => model.Apellidos)
+                            </div>
+                          </li>
+                          <li>
+                            <div class="four columns">
+                                @Html.EditorFor(model => model.Apellidos)
+                                @Html.ValidationMessageFor(model => model.Apellidos)
+                            </div>
+                          </li>
+                      </ul>
+                      <ul>
+                          <li>
+                            <div class="four columns">
+                                
+                                @Html.LabelFor(model => model.sexo)
+                            </div>
+                        </li>
+                        <li>
+                            <div class="four columns">
+                                @Html.DropDownList("sexo", new MultiSelectList(new[] {"Hombre", "Mujer"}))
+                                @*Html.EditorFor(model => model.sexo)*@
+                                @Html.ValidationMessageFor(model => model.sexo)
+                            </div>
+                        </li>
+                     </ul>
+                     <ul>
+                         <li>
+                            <div class="four columns">
+                                @Html.LabelFor(model => model.Fecha_Nacimiento)
+                            </div>
+                        </li>
+                        <li>
+                            <div class="four columns">
+                                <input type="date" name="Fecha_Nacimiento"/>
+                                @*Html.EditorFor(model => model.Fecha_Nacimiento)*@
+                                @Html.ValidationMessageFor(model => model.Fecha_Nacimiento)
+                            </div>
+                        </li>
+                     </ul>
+                     <ul>
+                         <li>
+                            <div class="four columns">
+                                @Html.LabelFor(model => model.Telefono)
+                            </div>
+                        </li>
+                        <li>
+                            <div class="four columns">
+                                @Html.EditorFor(model => model.Telefono)
+                                @Html.ValidationMessageFor(model => model.Telefono)
+                            </div>
+                        </li>
+                     </ul>
+                     <ul>
+                         <li>
+                            <div class="four columns">
+                                @Html.LabelFor(model => model.Carrera)
+                            </div>
+                        </li>
+                        <li>
+                            <div class="four columns">
+                                @Html.EditorFor(model => model.Carrera)
+                                @Html.ValidationMessageFor(model => model.Carrera)
+                            </div>
+                        </li>
+                     </ul>
+                     <ul>
+                         <li>
+                            <div class="four columns">
+                                @Html.LabelFor(model => model.Pais)
+                            </div>
+                        </li>
+                        <li>
+                            <div class="four columns">
+                                @Html.EditorFor(model => model.Pais)
+                                @Html.ValidationMessageFor(model => model.Pais)
+                            </div>
+                        </li>
+                     </ul>
+                     <ul>
+                         <li>
+                            <div class="four columns">
+                                @Html.LabelFor(model => model.Ciudad)
+                            </div>
+                        </li>
+                        <li>
+                            <div class="four columns">
+                                @Html.EditorFor(model => model.Ciudad)
+                                @Html.ValidationMessageFor(model => model.Ciudad)
+                            </div>
+                        <li>
+                     </ul>
+                     <ul>
+                         <li>
+                            <div class="four columns">
+                                @Html.LabelFor(model => model.Lenguaje_Defecto)
+                            </div>
+                        </li>
+                        <li>
+                            <div class="four columns">
+                                @Html.DropDownList("Lenguaje_Defecto", new MultiSelectList(new[] {"Español", "Portugues","Latin","Ingles","Clingon","Parcel","Sireno","Chino"}))
+                                @*Html.EditorFor(model => model.Lenguaje_Defecto)*@
+                                @Html.ValidationMessageFor(model => model.Lenguaje_Defecto)
+                            </div>
+                        </li>
+                     </ul>
+                     <ul>
+                         <li>
+                            <div class="four columns">
+                                @Html.LabelFor(model => model.e_mail)
+                            </div>
+                        </li>
+                        <li>
+                            <div class="four columns">
+                                @Html.EditorFor(model => model.e_mail)
+                                @Html.ValidationMessageFor(model => model.e_mail)
+                            </div>
+                        </li>
+                     </ul>
+                    <ul class="buttom_user">
+                        <li>
+                            <div>
+                                <input type="submit" value="Create" />
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input type="button" value="Cancelar" />
+                            </div>
+                        </li>
+                    </ul>
+                </nav>   
+            </fieldset>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

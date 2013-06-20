@@ -1,0 +1,46 @@
+﻿*
+{
+    padding:0;
+    margin:0 auto;
+}
+
+.Cuerpo
+{
+    
+}
+.container .eight.columns
+{
+   
+}
+.container .four.columns
+{
+    margin:0;
+    
+}
+.ContainerEstudiante
+{
+    height:35px;
+    box-shadow:#d2691e 0px 0px 8px;
+    border-bottom:3px solid #d2691e;
+    background:#d2691e;
+}
+.block_Es ul
+{
+    margin:0;
+    padding:0;
+}
+.block_Es ul li
+{
+    color:rgb(255, 255, 255);
+    border-right:3px solid rgba(255, 106, 0, 0.34);
+    display:inline-block;
+}
+.block_Es ul li .Label 
+{
+    text-align:center;
+    width:60px;
+}
+.block_Es ul .Nombre ,.nick
+{
+    border-right:none;
+}

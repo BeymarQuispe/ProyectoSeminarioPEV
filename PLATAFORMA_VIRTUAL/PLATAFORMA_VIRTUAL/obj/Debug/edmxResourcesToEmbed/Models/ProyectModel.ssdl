@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AULA_VIRTUALModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AULA_VIRTUALModelStoreContainer">
+    <EntitySet Name="COMENTARIO" EntityType="AULA_VIRTUALModel.Store.COMENTARIO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CURSO" EntityType="AULA_VIRTUALModel.Store.CURSO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MATERIAL" EntityType="AULA_VIRTUALModel.Store.MATERIAL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PREGUNTA" EntityType="AULA_VIRTUALModel.Store.PREGUNTA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RESPUESTA" EntityType="AULA_VIRTUALModel.Store.RESPUESTA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ROL" EntityType="AULA_VIRTUALModel.Store.ROL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="AULA_VIRTUALModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="USUARIO" EntityType="AULA_VIRTUALModel.Store.USUARIO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DatosValidar" EntityType="AULA_VIRTUALModel.Store.DatosValidar" store:Type="Views" store:Schema="dbo" store:Name="DatosValidar">
+      <DefiningQuery>SELECT 
+      [DatosValidar].[Id] AS [Id], 
+      [DatosValidar].[Nick] AS [Nick], 
+      [DatosValidar].[Pass] AS [Pass]
+      FROM [dbo].[DatosValidar] AS [DatosValidar]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__COMENTARI__Id_Cu__164452B1" Association="AULA_VIRTUALModel.Store.FK__COMENTARI__Id_Cu__164452B1">
+      <End Role="CURSO" EntitySet="CURSO" />
+      <End Role="COMENTARIO" EntitySet="COMENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__COMENTARI__Id_Us__15502E78" Association="AULA_VIRTUALModel.Store.FK__COMENTARI__Id_Us__15502E78">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="COMENTARIO" EntitySet="COMENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CURSO__Id_Usuari__08EA5793" Association="AULA_VIRTUALModel.Store.FK__CURSO__Id_Usuari__08EA5793">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="CURSO" EntitySet="CURSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATERIAL__Id_Cur__0DAF0CB0" Association="AULA_VIRTUALModel.Store.FK__MATERIAL__Id_Cur__0DAF0CB0">
+      <End Role="CURSO" EntitySet="CURSO" />
+      <End Role="MATERIAL" EntitySet="MATERIAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATERIAL__Id_usu__0EA330E9" Association="AULA_VIRTUALModel.Store.FK__MATERIAL__Id_usu__0EA330E9">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="MATERIAL" EntitySet="MATERIAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PREGUNTA__Id_Cur__1BFD2C07" Association="AULA_VIRTUALModel.Store.FK__PREGUNTA__Id_Cur__1BFD2C07">
+      <End Role="CURSO" EntitySet="CURSO" />
+      <End Role="PREGUNTA" EntitySet="PREGUNTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PREGUNTA__Id_Usu__1B0907CE" Association="AULA_VIRTUALModel.Store.FK__PREGUNTA__Id_Usu__1B0907CE">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PREGUNTA" EntitySet="PREGUNTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RESPUESTA__Id_Cu__21B6055D" Association="AULA_VIRTUALModel.Store.FK__RESPUESTA__Id_Cu__21B6055D">
+      <End Role="CURSO" EntitySet="CURSO" />
+      <End Role="RESPUESTA" EntitySet="RESPUESTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RESPUESTA__Id_Us__20C1E124" Association="AULA_VIRTUALModel.Store.FK__RESPUESTA__Id_Us__20C1E124">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="RESPUESTA" EntitySet="RESPUESTA" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="COMENTARIO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Usuario" Type="int" Nullable="false" />
+    <Property Name="Id_Curso" Type="int" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CURSO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre_Curso" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Id_Usuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MATERIAL">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Material" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Tipo_Material" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Id_usuario" Type="int" Nullable="false" />
+    <Property Name="Id_Curso" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PREGUNTA">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Usuario" Type="int" Nullable="false" />
+    <Property Name="Id_Curso" Type="int" Nullable="false" />
+    <Property Name="Pregunta" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RESPUESTA">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Usuario" Type="int" Nullable="false" />
+    <Property Name="Id_Curso" Type="int" Nullable="false" />
+    <Property Name="Respuesta" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ROL">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Id_Usuario" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Usuario" Type="int" Nullable="false" />
+    <Property Name="Nombre_rol" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nick" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Pass" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Img_Usuario" Type="image" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Apellidos" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="sexo" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Fecha_Nacimiento" Type="date" Nullable="false" />
+    <Property Name="Telefono" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Carrera" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Pais" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Ciudad" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Lenguaje_Defecto" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="e_mail" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AULA_VIRTUAL.dbo.DatosValidar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="DatosValidar">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Nick" />
+      <PropertyRef Name="Pass" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nick" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Pass" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__COMENTARI__Id_Cu__164452B1">
+    <End Role="CURSO" Type="AULA_VIRTUALModel.Store.CURSO" Multiplicity="1" />
+    <End Role="COMENTARIO" Type="AULA_VIRTUALModel.Store.COMENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="COMENTARIO">
+        <PropertyRef Name="Id_Curso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__COMENTARI__Id_Us__15502E78">
+    <End Role="USUARIO" Type="AULA_VIRTUALModel.Store.USUARIO" Multiplicity="1" />
+    <End Role="COMENTARIO" Type="AULA_VIRTUALModel.Store.COMENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="COMENTARIO">
+        <PropertyRef Name="Id_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CURSO__Id_Usuari__08EA5793">
+    <End Role="USUARIO" Type="AULA_VIRTUALModel.Store.USUARIO" Multiplicity="1" />
+    <End Role="CURSO" Type="AULA_VIRTUALModel.Store.CURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CURSO">
+        <PropertyRef Name="Id_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATERIAL__Id_Cur__0DAF0CB0">
+    <End Role="CURSO" Type="AULA_VIRTUALModel.Store.CURSO" Multiplicity="1" />
+    <End Role="MATERIAL" Type="AULA_VIRTUALModel.Store.MATERIAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MATERIAL">
+        <PropertyRef Name="Id_Curso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATERIAL__Id_usu__0EA330E9">
+    <End Role="USUARIO" Type="AULA_VIRTUALModel.Store.USUARIO" Multiplicity="1" />
+    <End Role="MATERIAL" Type="AULA_VIRTUALModel.Store.MATERIAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MATERIAL">
+        <PropertyRef Name="Id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PREGUNTA__Id_Cur__1BFD2C07">
+    <End Role="CURSO" Type="AULA_VIRTUALModel.Store.CURSO" Multiplicity="1" />
+    <End Role="PREGUNTA" Type="AULA_VIRTUALModel.Store.PREGUNTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PREGUNTA">
+        <PropertyRef Name="Id_Curso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PREGUNTA__Id_Usu__1B0907CE">
+    <End Role="USUARIO" Type="AULA_VIRTUALModel.Store.USUARIO" Multiplicity="1" />
+    <End Role="PREGUNTA" Type="AULA_VIRTUALModel.Store.PREGUNTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PREGUNTA">
+        <PropertyRef Name="Id_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RESPUESTA__Id_Cu__21B6055D">
+    <End Role="CURSO" Type="AULA_VIRTUALModel.Store.CURSO" Multiplicity="1" />
+    <End Role="RESPUESTA" Type="AULA_VIRTUALModel.Store.RESPUESTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RESPUESTA">
+        <PropertyRef Name="Id_Curso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RESPUESTA__Id_Us__20C1E124">
+    <End Role="USUARIO" Type="AULA_VIRTUALModel.Store.USUARIO" Multiplicity="1" />
+    <End Role="RESPUESTA" Type="AULA_VIRTUALModel.Store.RESPUESTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RESPUESTA">
+        <PropertyRef Name="Id_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

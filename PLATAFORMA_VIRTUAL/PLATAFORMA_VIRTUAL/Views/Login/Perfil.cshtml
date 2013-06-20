@@ -1,0 +1,67 @@
+﻿@model PLATAFORMA_VIRTUAL.Models.USUARIO
+
+@{
+    ViewBag.Title = "Perfil";
+}
+
+<h2></h2>
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.sexo)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.sexo)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Fecha_Nacimiento)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Fecha_Nacimiento)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Telefono)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Telefono)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Carrera)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Carrera)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Pais)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Pais)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Ciudad)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Ciudad)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Lenguaje_Defecto)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Lenguaje_Defecto)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.e_mail)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.e_mail)
+        </div>
+   
+    <p>
+            @Html.ActionLink("Edit", "../Usuario/Edit", new { id=Model.Id}) |
+            
+    </p>

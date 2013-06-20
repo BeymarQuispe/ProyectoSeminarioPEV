@@ -1,0 +1,555 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+
+
+/*==========================header========================*/
+.fondo
+{
+    
+    background:url('/Images/fondo3.png');
+}
+.header
+{
+    margin-top:0;
+    margin:0;
+    background:rgba(244, 164, 96, 0.41);
+    
+}
+.container
+{
+ 
+}
+.content
+{
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.container .eight.columns
+{
+    margin:0;
+}
+.container .thirteen.columns
+{
+    margin:0;
+   
+}
+nav.main1
+{
+    margin-top:15px;
+}
+.main1
+{
+    margin:0;
+    padding:0;
+}
+.main1 ul
+{
+    text-align:right;
+    margin:0;padding:0;
+}
+.main1 ul li
+{
+    margin:0;
+    display:inline-block;
+}
+.main1 ul li .text1
+{
+    margin:0;
+    padding:0;
+    color:#e27120;
+    font-size:25px;
+    font-family:Verdana;
+}
+.main1 ul li .text2
+{
+    margin:2%;
+    color:#e27120;
+    font-size:25px;
+    font-family:Arial;
+}
+.Red_social img:hover
+{
+   width:25px;
+}
+.container .two.columns
+{
+    margin:0;
+}
+.content_mainmenu
+{
+   
+}
+.container .sixteen.columns
+{
+    border-bottom: 3px solid #d2691e;
+    border-top: 3px solid #d2691e;
+    background:rgba(202, 101, 29, 0.90);
+    margin: 0;
+    
+    -webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.mainmenu ul
+{
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+.mainmenu ul li
+{
+    background:#e27120;
+    margin:0;
+    display:inline-block;
+    height:60px;
+    width:150px;
+}
+.mainmenu ul li a
+{
+    
+    font-size:20px;
+    color:#fff;
+    font-family:'Times New Roman';
+    text-align:center;
+    text-decoration:none;
+}
+.mainmenu ul li:hover
+{
+    background: #f4a460;
+    
+}
+
+/*===================================Cuerpo========================================*/
+.body
+{
+    margin-top:15px;
+}
+.font2
+{
+
+    color:#fff;
+    font-size:50px;
+    text-align:center;
+    height:130px;
+    border:3px solid rgba(139, 131, 131, 0.00);
+    
+}
+.font2 p
+{
+    margin-top:40px;
+    font-family:'Lucida Calligraphy';
+    box-shadow:#ca651d 0px 0px 8px,#ca651d 0px 0px 8px,#ca651d 0px 0px 8px;
+}
+.content_2
+{
+    margin:0 auto;
+    border:10px solid #ff0000;
+    background:#21e8db;
+}
+.container .five.columns 
+{
+    margin:0;
+    
+}
+.container .fourteen.columns
+{
+    
+    margin:0;
+}
+.contenido_text
+{
+    position:absolute;
+    top:+100px;
+    left:200px;
+    z-index:50;
+    background:rgba(255, 216, 0, 0.47);
+    border-radius:5px;
+    box-shadow: rgba(244, 164, 96, 0.41) 0px 0px 8px,rgba(244, 164, 96, 0.41) 0px 0px 8px,rgba(244, 164, 96, 0.41) 0px 0px 8px,rgba(244, 164, 96, 0.41) 0px 0px 8px,rgba(210, 105, 30, 0.69) 0px 0px 8px;
+}
+.block ul
+{
+    margin-top:10px;
+    margin-left:10px;
+}
+.block ul li
+{
+    display:inline-block;
+}
+.block1, .block2, .block3, .block4
+{
+    box-shadow:rgba(244, 164, 96, 0.41) 0px 0px 8px;
+    border-radius:10px;
+    width:233px;
+    background: rgba(244, 164, 96, 0.41);
+    height:270px;
+}
+.block_img
+{
+    margin-left:5px;
+}
+.clase1, .clase2, .clase3, .clase4
+{
+    box-shadow:#808080 0px 0px 10px;
+    border-radius:10px;
+    margin-left:5px;
+    margin-bottom:5px;
+    height:200px;
+    width:953px;
+    background:#21e8db;
+
+}
+.container .five.columns
+{
+    margin:0;
+    background:rgb(232, 132, 25);
+}
+.container .eleven.columns
+{
+    margin:0;
+    background:rgba(255, 216, 0, 0.76);
+}
+
+
+/*================================Pie===========================================*/
+.content-wrapper
+{
+   
+}
+/*===============================Compania========================================*/
+.container .twelve.columns
+{  
+    margin-left:15px;
+
+}
+.text5
+{
+    margin-top:10px;
+    height:90px;
+    font-family: Arial;
+    font-size:70px;
+    color:rgba(255, 216, 0, 0.47);
+}
+.text6
+{
+    font-family:Algerian;
+    font-size:30px;
+    color:#ffffff;
+}
+.block_quienes p
+{
+    margin-left:35px;
+}
+.block_quienes
+{
+    width:200px;
+    height:60px;
+    background:rgba(255, 216, 0, 0.79);
+    border-radius:10px;
+    box-shadow:rgba(255, 216, 0, 0.76) 0px 0px 8px;
+    
+}
+.block_menu ul
+{
+    margin-left:25px;
+}
+.block_menu ul li
+{
+   
+    margin:0;
+    padding:0;
+}
+.block_menu ul li
+{
+    
+    margin-top:20px;
+    border-bottom:2px solid rgba(255, 216, 0, 0.76);
+    width:200px;
+}
+.block_menu ul li a
+{
+
+}
+.block_menu ul .div_block
+{
+    border-bottom:none;
+}
+.block_menu ul li a:hover
+{
+    color:#e27120;
+    font-size:30px;
+
+}
+#text
+{
+    font-size:35px;
+}
+.img
+{
+    width:270px;
+}
+.text7
+{
+    font-family:'Lucida Calligraphy';
+    color:#ca651d;
+    font-size:20px;
+}
+/*=====================================================================Equipo========================================*/
+/*=====================================================================Ventana de seleccion de nodo de registro========================================*/
+.text8
+{
+    margin-bottom:50px;
+    text-align:center;
+    font-family:'Lucida Calligraphy';
+    color:#fff;
+    font-size:30px;
+    text-shadow:1px 1px #fff,2px 2px #fff,3px 3px #fff,4px 4px #fff;
+}
+.ContentSeklecrUser 
+{
+    position:relative;
+    margin:0 auto;
+}
+.container .nine.columns
+{
+    margin:0 auto;
+    
+}
+.container .five.columns
+{
+     margin:0;
+     background:none;
+}
+.block_select 
+{
+    margin:0 auto;
+}
+.block_User_Select ul
+{
+    
+    width:250px;
+    text-align:center;
+    margin:0 auto;
+}
+.block_User_Select ul li
+{
+    background:#d2691e;
+    border-radius:10px;
+    max-width:150px;
+    border:3px solid #d2691e;
+    box-shadow:rgba(210, 105, 30, 0.80) 0px 0px 8px;
+}
+.block_User_Select ul li a
+{
+    color:#fff;
+    text-decoration:none;
+}
+.block_User_Select ul li:hover
+{
+    border:2px solid #fff;
+    background:#fff;
+    color:#000;
+}
+.block_User_Select ul li a:hover
+{
+    color:#000000;
+    font-family:'Lucida Calligraphy';
+    font-size:15px;
+}
+
+/*==========================================================Formulario usuario========================================*/
+.fromUser
+{
+    border-radius:20px;
+    box-shadow:#e27120 0px 0px 10px,#e27120 0px 0px 12px,#e27120 0px 0px 14px;
+    margin:0 auto;
+    max-width: 600px;
+    background:rgba(210, 105, 30, 0.66);
+    
+}
+.contenedorUser
+{
+    max-width: 100%;
+}
+.four.columns
+{
+    
+    margin:0 auto;
+    padding:0;
+    
+}
+.block_user ul
+{
+    margin:0 auto;
+    padding:0;
+}
+.block_user ul li
+{
+    margin:0 auto;
+    color:#fff;
+    display:inline-block;
+}
+.block_user ul li input
+{
+    color:#fff;
+    box-shadow:rgba(255, 216, 0, 0.47) 0px 0px 5px;
+    border:1px solid #d2691e;
+    background:rgba(244, 164, 96, 0.41);
+    margin:0 auto;
+    margin-left:3px;
+    margin-top:10px;
+    width:240px;
+}
+.buttom_user
+{
+    text-align:center;
+}
+.buttom_user li div
+{
+    margin-bottom:30px;
+}
+.buttom_user li div input
+{
+    width:150px;
+    background:#e27120;
+}
+.block_user ul li label
+{
+    text-align:right;
+    width:180px;
+}
+.block_user ul li select
+{
+    color:#fff;
+    width:250px;
+    padding:0;
+    box-shadow:rgba(255, 216, 0, 0.47) 0px 0px 5px;
+    border:1px solid #d2691e;
+    background:rgba(244, 164, 96, 0.41);
+    height:35px;
+    margin:0;
+}
+
+
+legend
+{
+    font-family:'Lucida Calligraphy';
+    font-size:35px;
+    text-align:center;
+    color:#fff;
+}
+
+/*==============================================Login============================*/
+.fromlogin
+{
+    position:relative;
+    margin:0 auto;
+}
+.conatinerlogin
+{
+    
+    border-radius:10px;
+    box-shadow:#f4a460 0px 0px 8px,#f4a460 0px 0px 8px,#f4a460 0px 0px 8px,#f4a460 0px 0px 8px,#f4a460 0px 0px 8px;
+    background:rgba(210, 105, 30, 0.64);
+}
+.block_login ul
+{
+    
+    font-family:'Lucida Calligraphy';
+    font-size:18px;
+    color:#fff;
+    text-align:center;
+    border:3px solid rgba(244, 164, 96, 0.08);
+}
+.block_login ul li input
+{
+    box-shadow:#f4a460 0px 0px 8px,#f4a460 0px 0px 8px,#f4a460 0px 0px 8px;
+    width:350px;
+    margin-left:10px;
+    text-align:center;
+    font-family:'Lucida Calligraphy';
+    font-size:18px;
+}
+#bottom_login:hover
+{
+    color:#fff;
+    border:1px solid rgba(244, 164, 96, 0.41);
+    background:#d2691e;
+}
+#bottom_login
+{
+    font-family:'Lucida Calligraphy';
+    font-size:18px;
+    width:150px;
+    box-shadow:none;
+}
+.block_login ul li
+{
+    margin-top:10px;
+    margin-bottom:0;
+}
+
+
+
+/*===========================Detalles=====================================*/
+.detalles_From
+{
+    background:rgba(210, 105, 30, 0.81);
+    color:#fff;
+}

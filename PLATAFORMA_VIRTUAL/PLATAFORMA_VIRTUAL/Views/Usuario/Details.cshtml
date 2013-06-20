@@ -1,0 +1,106 @@
+﻿@model PLATAFORMA_VIRTUAL.Models.USUARIO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>USUARIO</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nick)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nick)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Pass)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pass)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Apellidos)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Apellidos)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.sexo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sexo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Fecha_Nacimiento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fecha_Nacimiento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Telefono)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Telefono)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Carrera)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Carrera)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Pais)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pais)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ciudad)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ciudad)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Lenguaje_Defecto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Lenguaje_Defecto)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.e_mail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.e_mail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Fecha)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fecha)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

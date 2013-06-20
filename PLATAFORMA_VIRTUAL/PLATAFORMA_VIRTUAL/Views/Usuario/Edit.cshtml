@@ -1,0 +1,127 @@
+﻿@model PLATAFORMA_VIRTUAL.Models.USUARIO
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>USUARIO</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nick)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nick)
+            @Html.ValidationMessageFor(model => model.Nick)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Pass)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Pass)
+            @Html.ValidationMessageFor(model => model.Pass)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Apellidos)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Apellidos)
+            @Html.ValidationMessageFor(model => model.Apellidos)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sexo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sexo)
+            @Html.ValidationMessageFor(model => model.sexo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fecha_Nacimiento)
+        </div>
+        <div class="editor-field">
+            <input type="date" name="Fecha_Nacimiento" />
+            @*Html.EditorFor(model => model.Fecha_Nacimiento)*@
+            @Html.ValidationMessageFor(model => model.Fecha_Nacimiento)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Telefono)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Telefono)
+            @Html.ValidationMessageFor(model => model.Telefono)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Carrera)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Carrera)
+            @Html.ValidationMessageFor(model => model.Carrera)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Pais)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Pais)
+            @Html.ValidationMessageFor(model => model.Pais)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Ciudad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Ciudad)
+            @Html.ValidationMessageFor(model => model.Ciudad)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Lenguaje_Defecto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Lenguaje_Defecto)
+            @Html.ValidationMessageFor(model => model.Lenguaje_Defecto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.e_mail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.e_mail)
+            @Html.ValidationMessageFor(model => model.e_mail)
+        </div>
+
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
